@@ -1,0 +1,27 @@
+<block wx:if="{{planActivities.length>0}}">
+  <block wx:for='{{planActivities}}' wx:key='{{item._id}}'>
+    <!-- data-*属性在触发事件时获取  -->
+    <view class='item_container' hover-class='item-press' bindtap='itemOnclick' data-item='{{item}}'>
+      <view class='container1'>
+        <image class="img" wx:if="{{item.img}}" src='{{item.img}}' />
+        <image class="img" wx:else src='/res/default_preview.jpg' />
+        <view class="container2">
+
+         <view class="top-line">
+       <text class='title'>{{item.title}}</text>
+        <button class="goto-comment">详情</button>
+        </view>
+          
+          <text class='author_name'>分享人: {{item.author_name}}</text>
+          <text class='place'>地点: {{item.place}}</text>
+          <text class='start_time'>开始时间: {{item.start_date}} {{item.start_time}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</block>
+<view class="no_data" wx:else>暂无计划中的分享</view>
+
+<view bindtap="register">
+<image class='refreshimg' src='/res/qiandao.png'></image>
+</view>

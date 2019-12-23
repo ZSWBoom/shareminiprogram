@@ -1,0 +1,13 @@
+<!--pages/grade/grade.wxml-->
+<form class='form' bindsubmit="formSubmit">
+
+  <radio-group name='score' class="radio-group">
+    <radio value="3" checked="true" /> 3分
+    <radio value="2" /> 2分
+    <radio value="1" /> 1分
+  </radio-group>
+
+  <textarea class='feedback' name="feedback" placeholder="我要提建议……"></textarea>
+
+  <button class="btn" form-type="submit" type="primary">提交</button>
+</form>

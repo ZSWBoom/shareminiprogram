@@ -1,0 +1,24 @@
+<view class='item_container'>
+  <block wx:if="{{activity.img}}">
+    <image class="img" wx:if="{{activity.img}}" src='{{activity.img}}' />
+  </block>
+  <text class='title'>主题: {{activity.title}}</text>
+  <text class='ps'>简介: {{activity.ps}}</text>
+  <text class='score'>评分: {{average_score}}</text>
+  <text class='place'>地点: {{activity.place}}</text>
+  <text class='start_time'>开始时间: {{activity.start_date}} {{activity.start_time}}</text>
+  <block wx:if="{{!activity.is_done}}">
+    <image class='qr' src="http://api.k780.com:88/?app=qr.get&data={{activity._id}}" />
+  </block>
+
+  <view class="divLine" />
+  <block wx:if="{{activity.attends}}">
+    <block wx:for='{{activity.attends}}' wx:key='{{activity.attends._id}}'>
+      <view class="container_comment">
+        <text class='feedback'>{{item.feedback}}</text>
+        <text class='score'>评分: {{item.score}}</text>
+      </view>
+    </block>
+  </block>
+  <text wx:else>暂无评论</text>
+</view>

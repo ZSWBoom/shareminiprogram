@@ -1,0 +1,16 @@
+<view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取用户信息 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <button hidden="{{key != 199766}}" class="btn_function" bindtap='addActivity'>新建分享</button>
+      <button class="btn_function" bindtap='gotoMyActivity'>我创建的分享</button>
+
+      <button id="btn_joinedActivity" class="btn_function" bindtap='gotoJoinedActivity'>我参加的分享</button>
+      <button class="btn_function" bindtap='register'>签到</button>
+
+      <button class="btn_function" bindtap='feedback'>用户反馈</button>
+    </block>
+  </view>
+</view>

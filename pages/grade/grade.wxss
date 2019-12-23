@@ -1,0 +1,10 @@
+/* pages/grade/grade.wxss */
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx;
+}
+
+.feedback {
+  margin-top: 20rpx;
+}

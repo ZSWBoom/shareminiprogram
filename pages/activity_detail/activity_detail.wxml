@@ -1,0 +1,69 @@
+<!--pages/activity_detail/activity_detail.wxml-->
+<view class=''>
+  <image class='detail-container' src='{{activity.img}}'></image>
+
+  <view class='detail-mask'></view>
+
+<view class='detail-info'>
+    <image src='{{activity.img}}' class='detail-img'></image>
+  <view class='detail'>
+   <view class='detail-nm'>{{activity.titlelong}}</view>
+   
+   <view class='detail-name'>分享人:{{activity.author_name}}</view>
+   <view class='detail-place'>地点:{{activity.place}}</view>
+   <view class='detail-time'>开始时间:{{activity.start_date}} {{activity.start_time}}</view>
+   <view wx:if="{{resultScore != -1}}" class='detail-sc'>{{resultScore}}分</view>
+   <view wx:else class='detail-sc'>暂无评分</view>
+
+  </view>
+</view>
+<view class='desc'>内容概述：{{activity.ps}}</view>
+
+<view hidden="{{commentEntity.length > 0?false:true}}">
+<view class="comment-list-container">观者评论：
+<view class="comment-list" wx:for="{{commentEntity}}" wx:key="{{index}}">
+<view class="comment-list-item"> 
+<image class="comment-img" src='/res/user-1.png'></image>
+<view class="comment-content">
+<text>{{item.content}}</text> 
+<text class="comment-score">{{item.score}}分</text>
+</view>
+</view>
+</view>
+</view>
+</view>
+
+  <!-- 评价 -->
+  <view class="comment-container" hidden="{{isDone == 0?true:false}}">
+    <van-field value="{{ content }}" placeholder="写一些评价吧..." bind:change="onContentChange" />
+    <view class="score-switch">
+    <view>请选择分数:</view>
+        <van-rate value="{{ score }}" bind:change="onScoreChange" />
+    </view>
+  
+    <!-- <van-button type="warning" bindtap="uploadImg">上传图片</van-button> -->
+    <view>
+      <!-- <image class="comment-img" src="{{item}}" wx:for="{{images}}" wx:key="{{index}}"></image> -->
+    </view>
+    <view class="comment-btn">
+     <van-button size="large" type="danger" bindtap="submit" disabled='{{disabled}}'>{{btnText}}</van-button>
+    </view>
+  </view>
+
+  <view class="signup-btn" hidden="{{(isDone == 0)?false:true}}">
+  <view  class= "signup-count"> <text>已报名人数：{{signUpCount}}</text></view>
+  <view wx:if="{{haveSignUp == -1}}">
+     <van-button class= 'signupbtn' size="large" type="warning" bindtap="signup">报名参加会议</van-button>
+  </view>
+  <view wx:if="{{haveSignUp == 1}}">
+    <van-button class= 'signupbtn' size="large" type="warning" bindtap="signup">您已报名</van-button>
+  </view>
+  </view>
+
+    <view bindtap="refresh">
+    <image class='refreshimg' src='/res/refresh-3.png'></image>
+    </view>
+
+</view>
+ 
+

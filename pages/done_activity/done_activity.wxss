@@ -1,0 +1,108 @@
+/* pages/done/done.wxss */
+.item_container {
+  margin-top: 6rpx;
+  margin-bottom: 12rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  height: 230rpx;
+  display: flex;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgb(250, 248, 248);
+}
+
+.container1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.goto-comment{
+  float: right;
+  height: 65rpx;
+  width: 130rpx;
+  background: rgba(255, 151, 106, 0.904);
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.goto-comment::after{
+  border: 0;
+} 
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  width: 250rpx;
+  height: 200rpx;
+  margin: 20rpx;
+  border-radius: 5%;
+}
+
+.top-line{
+      width: 360rpx;
+      margin-top: 19rpx;
+}
+
+.title {
+  color: #666;
+  font-size: 30rpx;
+  font-weight: bolder
+}
+
+.author_name {
+  font-size: 30rpx;
+  font-weight: bolder;
+}
+
+.author_name_title {
+  font-size: 30rpx;
+  font-weight: bolder
+}
+
+.start_time {
+   margin-top: 10rpx;
+   font-size: 28rpx;
+   font-weight: bolder
+}
+
+.start_time_title {
+   margin-top: 10rpx;
+  font-size: 28rpx;
+  font-weight: bolder
+}
+
+.place {
+   margin-top: 10rpx;
+  font-size: 30rpx;
+  font-weight: bolder
+}
+
+.place_title {
+   margin-top: 10rpx;
+  font-weight: bolder;
+  font-size: 30rpx;
+}
+
+.scrore {
+  font-weight: bolder;
+  font-size: 32rpx;
+  color: #faaf00
+}
+
+.scrore_title {
+  font-weight: bolder;
+  font-size: 32rpx;
+}
+
+
+.no_data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50%;
+  color:#888888;
+  font-size: 54rpx;
+}

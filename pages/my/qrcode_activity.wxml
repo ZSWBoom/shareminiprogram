@@ -1,0 +1,5 @@
+<view class='item_container'>
+<block>
+<view class="qrview"> <image class='qr' src="http://api.k780.com:88/?app=qr.get&data={{activity._id}}" /></view>
+  </block>
+</view>

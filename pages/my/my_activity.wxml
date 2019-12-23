@@ -1,0 +1,26 @@
+<block wx:if="{{myActivities.length>0}}">
+  <block wx:for='{{myActivities}}' wx:key='{{item._id}}'>
+    <view class='item_container'>
+      <view class='container1' hover-class='item-press' bindtap='onItemclick' data-item='{{item}}'>
+        <image class="img" wx:if="{{item.img}}" src='{{item.img}}' />
+        <image class="img" wx:else src='/res/default_preview.jpg' />
+        <view class="container2">
+
+        <view class="top-line">
+        <text class='title'>{{item.title}}</text>
+        <button class="goto-comment">二维码</button>
+        </view>
+        
+          <text class='author_name'>分享人: {{item.author_name}}</text>
+          <text class='place'>地点: {{item.place}}</text>
+          <text class='start_time'>开始时间: {{item.start_date}} {{item.start_time}}</text>
+        </view>
+      </view>
+      <view class='container3'>
+        <button class='btn' wx:if="{{!item.is_done}}" type="warn" bindtap="delActivity" data-id='{{item._id}}'>删除</button>
+        <button class='btn' wx:if="{{!item.is_done}}" type="primary" bindtap='setActivityDone' data-id='{{item._id}}'>已完成</button>
+      </view>
+    </view>
+  </block>
+</block>
+<view class="no_data" wx:else>暂无创建的分享</view>

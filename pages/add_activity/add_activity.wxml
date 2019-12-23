@@ -1,0 +1,33 @@
+<!--pages/add_activity/add_activity.wxml-->
+<form class='form' bindsubmit="finishCreate">
+
+  <input class='title' name="title" placeholder="请输入分享主题" />
+  <textarea class='ps' name="ps" placeholder="简述分享主题，针对受众以及预期目的" />
+
+  <picker mode="date" value="{{sdate}}" start="2019-01-01" bindchange="bindSDateChange">
+    <view class="picker">
+      开始日期:
+    </view>
+    <input name="sdate" placeholder="选择开始日期" value='{{sdate}}' disabled="true" />
+  </picker>
+
+  <picker mode="time" value="{{stime}}" start="18:30" bindchange="bindSTimeChange">
+    <view class="picker">
+      开始时间:
+    </view>
+    <input name="stime" placeholder="选择开始时间" value='{{stime}}' disabled="true" />
+  </picker>
+
+  <input class='place' name="place" placeholder="输入分享地点" />
+
+  <block wx:if="{{fileID}}">
+    <image src='{{fileID}}'></image>
+  </block>
+  <button bindtap='choosePic'>上传封面</button>
+  <view>
+  <image src="{{item}}" wx:for="{{images}}" wx:key="{{index}}">
+  </image>
+  </view>
+  <button class="btn" form-type="submit" type="primary">提交</button>
+
+</form>

@@ -1,0 +1,152 @@
+/* pages/activity_detail/activity_detail.wxss */
+
+.detail-container {
+  height: 360rpx;
+  width: 100%;
+  filter: blur(40rpx);
+  opacity: 0.4;
+}
+
+.detail-mask {
+  position: absolute;
+  width: 100%;
+  height: 360rpx;
+  background-color: #333;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.detail-img {
+  padding: 3%;
+  width: 50%;
+  height: 70%;
+}
+
+.detail-info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 440rpx;
+}
+
+.detail {
+  margin-top: 20rpx;
+  flex-grow: 1;
+  line-height: 65rpx;
+}
+
+.detail view {
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.detail .detail-nm {
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.detail .detail-name{
+  font-weight: 700;
+}
+
+.detail .detail-time{
+  font-weight: 700;
+  font-size: 25rpx;
+}
+
+.detail .detail-place{
+  font-weight: 700;
+}
+
+.detail .detail-sc {
+  color: #fc0;
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.desc {
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+  margin-right: 20rpx;
+  height: 150rpx;
+  padding: 20rpx;
+  color: #555;
+  font-size: 34rpx;
+  border-bottom: 1px solid rgb(250, 247, 247);
+}
+
+.comment-container {
+  padding: 0 20rpx;
+}
+
+.comment {
+  padding: 10rpx;
+}
+
+.comment-list-container{
+  margin-bottom: 50rpx;
+  margin-left: 30rpx;
+}
+
+.comment-content {
+   margin-left: 10rpx;
+   width: 600rpx;
+   border: 2px solid rgb(250, 248, 248);
+   border-radius: 8rpx;
+   font-size: 35rpx;
+   font-weight: 600;
+   padding: 10rpx;
+}
+
+
+.comment-score{
+  margin-left:40rpx;
+   color: #fc0;
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.comment-list{
+  margin: 30rpx;
+}
+
+.comment-list-item{
+  display: flex;
+  flex-flow:row;
+}
+
+.comment-img {
+  margin-top: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.comment-btn{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+.signup-btn{
+  margin: 30rpx;
+  margin-top: 30rpx;
+}
+.score-switch{
+  float: right;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+.refreshimg{
+  position: fixed;
+  width: 82rpx;
+  height: 82rpx;
+  bottom: 70rpx;
+  right: 70rpx;
+}
+
+.signup-count{
+  margin-bottom: 30rpx;
+}

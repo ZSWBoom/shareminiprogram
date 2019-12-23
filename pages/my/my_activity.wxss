@@ -1,0 +1,70 @@
+/* pages/my_activity/my_activity.wxss */
+
+
+.container1 {
+  display: flex;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-line{
+  width:480rpx ;
+      margin-top: 14rpx;
+}
+
+.container3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.goto-comment{
+  float: right;
+  height: 65rpx;
+  width: 190rpx;
+  background: #E54847;
+  color: #fff;
+  font-size: 26rpx;
+}
+.img {
+  width: 200rpx;
+  height: 180rpx;
+  margin: 10rpx;
+  border-radius: 5%;
+}
+
+.title {
+  color: #353535;
+  font-size: 34rpx;
+}
+
+.author_name {
+  color: #888;
+  font-size: 28rpx;
+}
+
+.start_time {
+  color: #888;
+  font-size: 28rpx;
+}
+
+.place {
+  color: #888;
+  font-size: 28rpx;
+}
+
+.btn {
+  width: 50%;
+  margin-right: 10rpx;
+}
+
+.no_data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50%;
+  color:#888888;
+  font-size: 54rpx;
+}

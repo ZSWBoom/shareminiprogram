@@ -1,0 +1,30 @@
+/* pages/my/my.wxss */
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  margin-top: 50rpx;
+}
+
+.userinfo-nickname {
+  color: #353535;
+  margin-bottom: 50rpx;
+}
+
+.btn_function {
+  width: 100%;
+  margin-top: 5rpx;
+}
+
+#btn_joinedActivity {
+  width: 100%;
+  margin-top: 50rpx;
+}

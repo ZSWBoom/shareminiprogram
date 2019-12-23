@@ -1,0 +1,9 @@
+/* pages/my/feedback.wxss */
+
+.content {
+  margin-top: 10rpx;
+}
+
+.btn {
+  margin-top: 20rpx;
+}

@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/todo_activity/todo_activity",
+    "pages/activity_detail/activity_detail",
+    "pages/done_activity/done_activity",
+    "pages/my/my",
+    "pages/add_activity/add_activity",
+    "pages/my/my_activity",
+    "pages/grade/grade",
+    "pages/my/feedback",
+    "pages/my/my_activity_detail",
+    "pages/my/attend_activity",
+    "pages/qrcode/qrcode_activity",
+    "pages/my/qrcode_activity"
+  ],
+  "window": {
+    "navigationBarTitleText": "分享助手",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black"
+  },
+    "tabBar": {
+      "borderStyle": "white",
+      "list": [
+        {
+          "pagePath": "pages/todo_activity/todo_activity",
+          "text": "计划中",
+          "iconPath": "res/plan-2.png",
+          "selectedIconPath": "res/plan-2.png"
+        },
+        {
+          "pagePath": "pages/done_activity/done_activity",
+          "text": "已完成",
+          "iconPath": "res/finish-1.png",
+          "selectedIconPath": "res/finish-1.png"
+        },
+        {
+          "pagePath": "pages/my/my",
+          "text": "我的",
+          "iconPath": "res/user.png",
+          "selectedIconPath": "res/user.png"
+        }
+      ]
+    },
+  "sitemapLocation": "sitemap.json"
+}

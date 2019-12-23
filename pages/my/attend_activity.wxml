@@ -1,0 +1,21 @@
+<block wx:if="{{activities.length>0}}">
+<block wx:for='{{activities}}' wx:key='{{item._id}}'>
+  <view class='item_container'>
+    <view class='container1'>
+      <image class="img" wx:if="{{item.img}}" src='{{item.img}}' />
+      <image class="img" wx:else src='/res/default_preview.jpg' />
+      <view class="container2">
+        <text class='title'>{{item.title}}</text>
+        <text class='author_name'>分享人: {{item.author_name}}</text>
+        <text class='place'>地点: {{item.place}}</text>
+        <text class='start_time'>开始时间: {{item.start_date}} {{item.start_time}}</text>
+      </view>
+    </view>
+    <view hidden="{{item.is_done? false:true}}">
+    <button id="btn_grade" bindtap='gotoGrade' data-item='{{item}}' type="primary">去评价</button>
+    </view>
+    
+  </view>
+</block>
+</block>
+<view class="no_data" wx:else>暂无参加的分享</view>
